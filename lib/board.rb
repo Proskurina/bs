@@ -18,5 +18,14 @@ class Board
     ships_positions << ship.position
   end
 
+  def hit(position)
+    if ships_positions.include?(position)
+      hits << position
+      "Hit!"
+    else
+      missed_hits << position
+      "Missed!"
+    end
+  end
 
 end
